@@ -13,7 +13,7 @@ uci set "dhcp.@domain[-1].name=time.android.com"
 uci set "dhcp.@domain[-1].ip=203.107.6.88"
 
 # 设置主机名
-uci set system.@system[0].hostname='iStoreOS'
+uci set system.@system[0].hostname='KinrOS'
 uci set system.@system[0].timezone='CST-8'
 uci set system.@system[0].zonename='Asia/Shanghai'
 
@@ -25,9 +25,9 @@ uci commit luci
 
 # 【网络设置-static】
 uci set network.lan.proto='static'
-uci set network.lan.ipaddr='192.168.5.88'
+uci set network.lan.ipaddr='192.168.31.88'
 uci set network.lan.netmask='255.255.255.0'
-uci set network.lan.gateway='192.168.5.1'
+uci set network.lan.gateway='192.168.31.1'
 uci set network.lan.dns='223.5.5.5'
 uci commit network
 
@@ -123,7 +123,7 @@ rm -r /etc/banner1
 
 # 设置编译作者信息
 FILE_PATH="/etc/openwrt_release"
-NEW_DESCRIPTION="iStoreOS 版本号"
+NEW_DESCRIPTION="Kinsum Build@KingOS 版本号"
 sed -i "s/DISTRIB_DESCRIPTION='[^']*'/DISTRIB_DESCRIPTION='$NEW_DESCRIPTION'/" "$FILE_PATH"
 
 exit 0
